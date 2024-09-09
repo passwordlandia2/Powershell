@@ -1,0 +1,35 @@
+#The script below uses a function that when called with the same name will output three different greetings, but it's also a fun take on Hello World but with functions and Star Wars.
+
+#The premise of this is that the person speaking is an old fool who can't remember anything simple like your name because they're overly cautious but also because they are really distrustful.
+
+#I was practicing starting and stopping greetings and text with Read-Host as well.
+
+"`n"
+function ObiWan {
+    param($Greet,$Greet2)
+    Write-Host "Well hello there! I am Obi Wan Kenobi, and you must be" $Greet $Greet2
+}
+obiwan "The Emissary!" "It's a pleasure to meet you"
+
+"`n"
+function ObiWan {
+    param($Greet)
+    Write-Host "By the way, I probably should have asked your name first traveler. Just in case, what is your name?"
+    "`n"
+    $Prompt = Read-Host "Type your name"
+    "`n"
+    Write-Host "Ah yes, that's right"$Prompt "I've been expecting you."
+    "`n"
+}
+obiwan
+
+function ObiWan {
+    param($Greet,$Greet3)
+    Write-Host "Forgive my lack of manners, there are spies everywhere and you can't trust anyone anymore? Tell me your name again?"
+    "`n"
+    $Prompt = Read-Host "Type your name"
+    "`n"
+    Write-Host "Right, Right Right. Well there's not much time left" $Prompt,$Greet3
+    "`n"
+}
+obiwan "" "We must leave at once! Otherwise the Empire will find us"
